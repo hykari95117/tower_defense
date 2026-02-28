@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://byw2l6qxn1005"]
+
+[ext_resource type="Texture2D" uid="uid://chjlaq5uk2gky" path="res://assets/_origin/towers/tower3/tower_image3_summer.jpg" id="1_t5t8u"]
+
+[node name="Tower" type="CharacterBody2D" unique_id=721803840]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=744508752]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=555883316]
+position = Vector2(129, 140.5)
+scale = Vector2(0.49609375, 0.45117188)
+texture = ExtResource("1_t5t8u")

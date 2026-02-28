@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://byn0h73moynop"]
+
+[ext_resource type="Texture2D" uid="uid://dm181n86ypsdm" path="res://assets/_origin/background/summer.jpg" id="1_jirmm"]
+[ext_resource type="PackedScene" uid="uid://byw2l6qxn1005" path="res://scene/tower.tscn" id="2_xpwal"]
+
+[node name="Background" type="Parallax2D" unique_id=305363217]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="." unique_id=165090574]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer" unique_id=874777152]
+position = Vector2(3.000001, -1)
+scale = Vector2(2.2421875, 1.265625)
+texture = ExtResource("1_jirmm")
+centered = false
+
+[node name="Tower" parent="ParallaxLayer/Sprite2D" unique_id=721803840 instance=ExtResource("2_xpwal")]
+position = Vector2(125.324036, 134.32098)
