@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpr5urwixl8lf"
-path="res://.godot/imported/fail.jpg-0752910efe19755419e4676fdeff8829.ctex"
+uid="uid://4edfwx87jebf"
+path="res://.godot/imported/ufo.png-115b723fe84cf8dcc0f06716e59a7919.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/fail.jpg"
-dest_files=["res://.godot/imported/fail.jpg-0752910efe19755419e4676fdeff8829.ctex"]
+source_file="res://assets/skills/attack/ufo.png"
+dest_files=["res://.godot/imported/ufo.png-115b723fe84cf8dcc0f06716e59a7919.ctex"]
 
 [params]
 

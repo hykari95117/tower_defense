@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxqk0we4mucxu"
-path="res://.godot/imported/spring.jpg-4f35e11fbb52258145d6241864bc6889.ctex"
+uid="uid://bpwyitl7ameur"
+path="res://.godot/imported/electro_cannon.png-28f2be8e2cee0b6ac3634855c5bd80a6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/spring.jpg"
-dest_files=["res://.godot/imported/spring.jpg-4f35e11fbb52258145d6241864bc6889.ctex"]
+source_file="res://assets/skills/attack/electro_cannon.png"
+dest_files=["res://.godot/imported/electro_cannon.png-28f2be8e2cee0b6ac3634855c5bd80a6.ctex"]
 
 [params]
 
