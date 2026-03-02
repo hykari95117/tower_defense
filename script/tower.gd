@@ -7,7 +7,7 @@ extends Sprite2D
 const PROJECTILE_SCENE: PackedScene = preload("res://scene/flame_shot.tscn")
 
 # 초당 발사 횟수
-const FIRE_RATE: float = 4.0
+const FIRE_RATE: float = 2.0
 
 # 발사 간격을 누적할 타이머 변수
 var fire_timer: float = 0.0
@@ -41,7 +41,7 @@ func _fire_projectile() -> void:
 	var random_angle: float = randf() * TAU
 	# 각도를 방향 벡터로 변환하여 투사체에 전달
 	projectile.direction = Vector2(cos(random_angle), sin(random_angle))
-	# 투사체 스프라이트를 발사 방향으로 회전
-	projectile.rotation = random_angle
+	# 투사체 스프라이트를 발사 방향으로 회전 (이미지 머리가 위쪽이므로 -90도 오프셋 적용)
+	projectile.rotation = random_angle - PI / 2
 	# 부모 노드(Game)에 투사체를 자식으로 추가
 	get_parent().add_child(projectile)
