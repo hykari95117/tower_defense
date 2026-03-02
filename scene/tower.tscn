@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bc773euhtpdpa"]
+
+[ext_resource type="Texture2D" uid="uid://p3o1e662sn1u" path="res://assets/towers/fall_tower.png" id="1_tfrn6"]
+[ext_resource type="Script" uid="uid://byp5rv3o17afv" path="res://script/tower.gd" id="2"]
+
+[node name="Tower" type="Sprite2D" unique_id=1447982373]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_tfrn6")
+script = ExtResource("2")

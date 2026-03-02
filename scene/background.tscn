@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dkbg1x2y304w5"]
+
+[ext_resource type="Texture2D" uid="uid://dtdggr3mp7f5l" path="res://assets/background/fall.png" id="1_xpwal"]
+[ext_resource type="Script" uid="uid://cpw7j364vrf1h" path="res://script/background.gd" id="2"]
+
+[node name="Background" type="TextureRect" unique_id=1217076304]
+texture = ExtResource("1_xpwal")
+expand_mode = 1
+stretch_mode = 6
+script = ExtResource("2")

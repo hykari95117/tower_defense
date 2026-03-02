@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="tower_defense"
-run/main_scene="uid://byn0h73moynop"
+run/main_scene="res://scene/game.tscn"
 config/features=PackedStringArray("4.6", "Mobile")
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=1920
+window/stretch/mode="canvas_items"
 
 [physics]
 
