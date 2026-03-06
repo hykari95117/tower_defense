@@ -1,0 +1,13 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/skills/attack/skeleton_witch_sprite.png" id="1"]
+[ext_resource type="Script" path="res://script/skeleton_witch.gd" id="2"]
+
+[node name="SkeletonWitch" type="Node2D"]
+visible = false
+script = ExtResource("2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+hframes = 8
+vframes = 8

@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dhvcy4b8ohpta"]
+
+[ext_resource type="Texture2D" uid="uid://4edfwx87jebf" path="res://assets/skills/attack/ufo.png" id="1"]
+[ext_resource type="Script" uid="uid://c15ryplpl5vgw" path="res://script/ufo.gd" id="2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_beam"]
+size = Vector2(40, 120)
+
+[node name="UFO" type="Node2D" unique_id=1038741172]
+visible = false
+script = ExtResource("2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1773704165]
+texture = ExtResource("1")
+
+[node name="BeamArea" type="Area2D" parent="." unique_id=375094911]
+collision_layer = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BeamArea" unique_id=1900180175]
+position = Vector2(0, 60)
+shape = SubResource("RectangleShape2D_beam")

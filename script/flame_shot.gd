@@ -19,6 +19,8 @@ var viewport_size: Vector2 = Vector2.ZERO
 func _ready() -> void:
 	# 뷰포트 크기를 미리 캐싱
 	viewport_size = get_viewport_rect().size
+	# body_entered 시그널 연결 (CharacterBody2D인 slime 감지용)
+	body_entered.connect(_on_body_entered)
 
 
 func _process(delta: float) -> void:
@@ -35,4 +37,13 @@ func _check_out_of_screen() -> void:
 		queue_free()
 	elif position.y < -MARGIN or position.y > viewport_size.y + MARGIN:
 		# 상하 화면 밖이면 삭제
+		queue_free()
+
+
+func _on_body_entered(body: Node2D) -> void:
+	# 충돌한 오브젝트가 슬라임(CharacterBody2D)인지 확인
+	if body.is_in_group("monster"):
+		# 몬스터에게 데미지 전달 (hp 관리는 몬스터 측에서 처리)
+		body.take_damage()
+		# 투사체 자신은 즉시 삭제
 		queue_free()

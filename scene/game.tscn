@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bc773euhtpdpa" path="res://scene/tower.tscn" id="2"]
 [ext_resource type="Script" path="res://script/game.gd" id="3"]
 [ext_resource type="PackedScene" path="res://scene/monster_spawner.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scene/ufo.tscn" id="5"]
+[ext_resource type="PackedScene" path="res://scene/skeleton_witch.tscn" id="6"]
 
 [node name="Game" type="Node2D" unique_id=41714374]
 script = ExtResource("3")
@@ -13,3 +15,40 @@ script = ExtResource("3")
 [node name="Tower" parent="." unique_id=1367798168 instance=ExtResource("2")]
 
 [node name="MonsterSpawner" parent="." unique_id=1791525775 instance=ExtResource("4")]
+
+[node name="UFO" parent="." instance=ExtResource("5")]
+
+[node name="SkeletonWitch" parent="." instance=ExtResource("6")]
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="UFOButton" type="Button" parent="UILayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -80.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "UFO"
+
+[node name="WitchButton" type="Button" parent="UILayer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -140.0
+offset_right = -20.0
+offset_bottom = -80.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Witch"
+
+[connection signal="pressed" from="UILayer/UFOButton" to="." method="_on_ufo_button_pressed"]
+[connection signal="pressed" from="UILayer/WitchButton" to="." method="_on_witch_button_pressed"]
