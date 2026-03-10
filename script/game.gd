@@ -7,10 +7,22 @@ extends Node2D
 @onready var ufo: Node2D = $UFO
 # SkeletonWitch 노드 참조
 @onready var skeleton_witch: Node2D = $SkeletonWitch
+# 점수 표시 라벨 참조
+@onready var score_label: Label = $UILayer/ScoreLabel
+
+# 현재 누적 점수
+var score: int = 0
 
 
 func _ready() -> void:
-	pass
+	# 점수판 초기 텍스트 설정
+	score_label.text = "SCORE\n0"
+
+
+func add_score(amount: int) -> void:
+	# 점수 누적 후 라벨 갱신
+	score += amount
+	score_label.text = "SCORE\n%d" % score
 
 
 func _unhandled_input(event: InputEvent) -> void:

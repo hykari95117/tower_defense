@@ -86,8 +86,13 @@ func activate() -> void:
 
 
 func _kill_all_monsters() -> void:
-	# "monster" 그룹에 속한 모든 노드를 즉시 제거
-	get_tree().get_nodes_in_group("monster").map(func(m): m.queue_free())
+	# "monster" 그룹에 속한 모든 노드 목록 가져오기
+	var monsters = get_tree().get_nodes_in_group("monster")
+	# 제거 전에 마리 수 * 10점을 한 번에 점수 반영
+	var game_node = get_tree().get_root().get_node("Game")
+	game_node.add_score(monsters.size() * 10)
+	# 모든 몬스터 즉시 제거
+	monsters.map(func(m): m.queue_free())
 
 
 func _start_fade_in() -> void:

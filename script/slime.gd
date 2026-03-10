@@ -42,6 +42,9 @@ func _physics_process(_delta: float) -> void:
 func take_damage() -> void:
 	# 피격 시 체력 1 감소
 	hp -= 1
-	# 체력이 0 이하이면 슬라임 삭제
+	# 체력이 0 이하이면 점수 추가 후 슬라임 삭제
 	if hp <= 0:
+		# Game 노드의 add_score 호출하여 처치 점수 +10 반영
+		var game_node = get_tree().get_root().get_node("Game")
+		game_node.add_score(10)
 		queue_free()
